@@ -1,0 +1,26 @@
+{
+  "base_model": "llama-3-8b-instruct",
+  "adapter_name": "driftguard-fastapi-lora-v1",
+  "status": "TRAINING",
+  "progress": {
+    "epoch": 2,
+    "total_epochs": 5,
+    "step": 450,
+    "total_steps": 1125,
+    "current_loss": 0.432,
+    "estimated_time_remaining": "45m 12s",
+    "percentage": 40
+  },
+  "hyperparameters": {
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "learning_rate": "2e-4",
+    "batch_size": 4,
+    "optimizer": "adamw_8bit"
+  },
+  "dataset": {
+    "name": "fastapi_drift_pairs_synthetic.jsonl",
+    "samples": 4500,
+    "split": "80/20"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "repository": "tiangolo-fastapi",
+  "files": [
+    {
+      "file_path": "api/users.py",
+      "ast_facts": [
+        {
+          "id": "fact-1",
+          "type": "IMPORT",
+          "name": "FastAPI",
+          "source": "fastapi",
+          "line": 1
+        },
+        {
+          "id": "fact-2",
+          "type": "CLASS",
+          "name": "User",
+          "line": 10,
+          "docstring": "User model representing an account.",
+          "methods": [
+            {
+              "name": "get_full_name",
+              "line": 15,
+              "decorators": [],
+              "return_annotation": "str"
+            }
+          ]
+        },
+        {
+          "id": "fact-3",
+          "type": "FUNCTION",
+          "name": "create_user",
+          "line": 25,
+          "decorators": ["@router.post('/users')"],
+          "docstring": "Create a new user.",
+          "return_annotation": "User",
+          "calls": ["session.add", "session.commit"],
+          "callers": ["test_create_user"],
+          "callees": ["hash_password", "db.add"],
+          "documentation_links": ["docs/users.md:L5-8"],
+          "test_links": ["tests/test_users.py:L10-25"],
+          "config_links": []
+        }
+      ],
+      "source_code": "from fastapi import FastAPI\n\n# ... (other imports) ...\n\nclass User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username\n\n    def get_full_name(self) -> str:\n        return self.username\n\n@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"\n    # implementation\n    session.add(user)\n    session.commit()\n    return user\n"
+    },
+    {
+      "file_path": "core/security.py",
+      "ast_facts": [
+        {
+          "id": "fact-4",
+          "type": "FUNCTION",
+          "name": "verify_password",
+          "line": 20,
+          "decorators": [],
+          "docstring": "Verify a plain password against a hashed one.",
+          "return_annotation": "bool",
+          "calls": ["pwd_context.verify"],
+          "callers": ["login_for_access_token"],
+          "callees": ["pwd_context.verify"],
+          "documentation_links": ["docs/security.md:L15-20"],
+          "test_links": ["tests/test_security.py:L10-15"],
+          "config_links": ["core/config.py:L45-50"]
+        }
+      ],
+      "source_code": "import pwd_context\n\ndef get_password_hash(password: str) -> str:\n    return pwd_context.hash(password)\n\ndef verify_password(plain_password: str, hashed_password: str) -> bool:\n    \"\"\"Verify a plain password against a hashed one.\"\"\"\n    return pwd_context.verify(plain_password, hashed_password)\n"
+    }
+  ]
+}

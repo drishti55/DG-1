@@ -1,0 +1,49 @@
+{
+  "repository": "tiangolo-fastapi",
+  "file_path": "api/users.py",
+  "source_code": "from fastapi import FastAPI\nfrom core.security import verify_password\n\nclass User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username\n\n    def get_full_name(self) -> str:\n        return self.username\n\n@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"\n    # implementation\n    session.add(user)\n    session.commit()\n    return user\n",
+  "ast_units": [
+    {
+      "id": "unit-1",
+      "type": "CLASS",
+      "name": "User",
+      "lines": "L4-L10"
+    },
+    {
+      "id": "unit-2",
+      "type": "FUNCTION",
+      "name": "create_user",
+      "lines": "L12-L18"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk-1001",
+      "file": "api/users.py",
+      "lines": "4-10",
+      "artifact_type": "Code",
+      "fact_type": "CLASS",
+      "content": "class User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username\n\n    def get_full_name(self) -> str:\n        return self.username",
+      "char_count": 194,
+      "metadata": {
+        "repo": "tiangolo/fastapi",
+        "has_docstring": true
+      },
+      "hash": "8f2a7b9e3d1c6f4a2b8e5d9c0f1a3b6e"
+    },
+    {
+      "chunk_id": "chunk-1002",
+      "file": "api/users.py",
+      "lines": "12-18",
+      "artifact_type": "Code",
+      "fact_type": "FUNCTION",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"\n    # implementation\n    session.add(user)\n    session.commit()\n    return user",
+      "char_count": 165,
+      "metadata": {
+        "repo": "tiangolo/fastapi",
+        "has_decorators": true
+      },
+      "hash": "4c9b2a1e8f3d6c5b4a9e2d1f0c8b3a7e"
+    }
+  ]
+}

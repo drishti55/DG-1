@@ -1,0 +1,24 @@
+{
+  "query": "Extract the drift relationship between api/users.py and docs/users.md.",
+  "schema_definition": {
+    "type": "object",
+    "properties": {
+      "source_file": {"type": "string"},
+      "target_file": {"type": "string"},
+      "relationship_type": {"type": "string", "enum": ["DOCUMENTS", "TESTS", "CONFIGURES"]},
+      "is_drifted": {"type": "boolean"},
+      "confidence_score": {"type": "number"}
+    },
+    "required": ["source_file", "target_file", "relationship_type", "is_drifted", "confidence_score"]
+  },
+  "raw_llm_response": "```json\n{\n  \"source_file\": \"api/users.py\",\n  \"target_file\": \"docs/users.md\",\n  \"relationship_type\": \"DOCUMENTS\",\n  \"is_drifted\": true,\n  \"confidence_score\": 0.94\n}\n```",
+  "parsed_json": {
+    "source_file": "api/users.py",
+    "target_file": "docs/users.md",
+    "relationship_type": "DOCUMENTS",
+    "is_drifted": true,
+    "confidence_score": 0.94
+  },
+  "validation_status": "PASSED",
+  "validation_errors": []
+}

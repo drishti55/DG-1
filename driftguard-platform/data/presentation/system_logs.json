@@ -1,0 +1,13 @@
+{
+  "status": "STREAMING",
+  "logs": [
+    {"id": 1, "timestamp": "2026-10-07T06:30:10.123Z", "level": "INFO", "service": "uvicorn", "message": "Application startup complete. Listening on http://0.0.0.0:8000"},
+    {"id": 2, "timestamp": "2026-10-07T06:30:12.450Z", "level": "DEBUG", "service": "vector_store", "message": "Initialized FAISS index with 5,240 vectors (L2 distance)."},
+    {"id": 3, "timestamp": "2026-10-07T06:30:15.002Z", "level": "INFO", "service": "rag_pipeline", "message": "Received query: [Drift Check] Validate FastAPI router definitions against docs."},
+    {"id": 4, "timestamp": "2026-10-07T06:30:15.250Z", "level": "DEBUG", "service": "retriever", "message": "BM25 score: 0.82 | Dense score: 0.91 -> Hybrid score: 0.88"},
+    {"id": 5, "timestamp": "2026-10-07T06:30:16.880Z", "level": "WARNING", "service": "llm_adapter", "message": "Latency spike detected in Llama-3 inference (850ms). GPU temp: 82C."},
+    {"id": 6, "timestamp": "2026-10-07T06:30:17.100Z", "level": "INFO", "service": "orchestrator", "message": "Evaluation completed. Drift Severity: MODERATE. Generating Actionable PR..."},
+    {"id": 7, "timestamp": "2026-10-07T06:30:18.110Z", "level": "ERROR", "service": "github_webhook", "message": "Connection timeout when pushing actionable PR (Event ID: wh_002). Retrying in 5s..."},
+    {"id": 8, "timestamp": "2026-10-07T06:30:23.110Z", "level": "INFO", "service": "github_webhook", "message": "Retry successful. PR #442 generated."}
+  ]
+}

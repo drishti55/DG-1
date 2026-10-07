@@ -1,0 +1,30 @@
+{
+  "total_export_size_mb": 142.5,
+  "last_full_backup": "2026-10-06T12:00:00Z",
+  "export_artifacts": [
+    {
+      "id": "exp_datasets_raw",
+      "name": "Raw Chunked Datasets",
+      "format": "JSONL",
+      "size_mb": 45.2,
+      "description": "Raw code and documentation chunks extracted from source control.",
+      "status": "READY"
+    },
+    {
+      "id": "exp_embeddings",
+      "name": "Vector Embeddings",
+      "format": "Parquet",
+      "size_mb": 85.0,
+      "description": "Dense and Sparse vector embeddings generated from AST chunks.",
+      "status": "READY"
+    },
+    {
+      "id": "exp_eval_reports",
+      "name": "Evaluation & Drift Reports",
+      "format": "JSON",
+      "size_mb": 12.3,
+      "description": "Historical precision/recall metrics and qualitative AI vs Human drift analyses.",
+      "status": "GENERATING"
+    }
+  ]
+}

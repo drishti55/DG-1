@@ -1,0 +1,51 @@
+{
+  "total_events_7d": 1428,
+  "failed_authentications": 12,
+  "events": [
+    {
+      "id": "evt_99814",
+      "timestamp": "2026-10-07T06:21:45Z",
+      "user": "Admin (System)",
+      "action": "UPDATE_RBAC_POLICY",
+      "resource": "role_ml_engineer",
+      "status": "SUCCESS",
+      "ip_address": "10.0.0.1"
+    },
+    {
+      "id": "evt_99812",
+      "timestamp": "2026-10-07T06:15:22Z",
+      "user": "Alice (ML Engineer)",
+      "action": "TRIGGER_FINETUNING",
+      "resource": "driftguard-fastapi-lora-v1",
+      "status": "SUCCESS",
+      "ip_address": "192.168.1.42"
+    },
+    {
+      "id": "evt_99813",
+      "timestamp": "2026-10-07T06:17:05Z",
+      "user": "System (GitHub Webhook)",
+      "action": "CREATE_PULL_REQUEST",
+      "resource": "docs/users.md",
+      "status": "SUCCESS",
+      "ip_address": "140.82.112.4"
+    },
+    {
+      "id": "evt_99811",
+      "timestamp": "2026-10-07T06:12:10Z",
+      "user": "Bob (Code Reviewer)",
+      "action": "OVERRIDE_DRIFT_SEVERITY",
+      "resource": "api/users.py",
+      "status": "DENIED",
+      "ip_address": "10.0.0.105"
+    },
+    {
+      "id": "evt_99810",
+      "timestamp": "2026-10-07T06:05:00Z",
+      "user": "System (Orchestrator)",
+      "action": "RUN_EVALUATION_PIPELINE",
+      "resource": "dataset:tiangolo-fastapi",
+      "status": "SUCCESS",
+      "ip_address": "127.0.0.1"
+    }
+  ]
+}

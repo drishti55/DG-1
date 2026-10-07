@@ -1,0 +1,40 @@
+{
+  "active_users": 142,
+  "roles": [
+    {
+      "id": "role_admin",
+      "name": "Super Admin",
+      "user_count": 3,
+      "permissions": ["all"]
+    },
+    {
+      "id": "role_ml_engineer",
+      "name": "AI/ML Engineer",
+      "user_count": 12,
+      "permissions": [
+        "trigger_finetuning",
+        "modify_embeddings",
+        "access_raw_datasets",
+        "view_dashboards"
+      ]
+    },
+    {
+      "id": "role_code_reviewer",
+      "name": "Code Reviewer",
+      "user_count": 127,
+      "permissions": [
+        "view_dashboards",
+        "approve_actionable_prs",
+        "override_drift_severity"
+      ]
+    }
+  ],
+  "permission_dictionary": {
+    "view_dashboards": "Can view read-only telemetry and evaluation dashboards",
+    "trigger_finetuning": "Can initiate, abort, and modify LoRA PEFT training jobs",
+    "modify_embeddings": "Can alter the vectorization schema and embedding models",
+    "access_raw_datasets": "Can download and view raw code/docs extraction JSONL files",
+    "approve_actionable_prs": "Can ship auto-generated PRs directly to GitHub via the Actionable UI",
+    "override_drift_severity": "Can manually adjust the severity of a detected drift event"
+  }
+}

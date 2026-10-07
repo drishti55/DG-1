@@ -1,0 +1,36 @@
+{
+  "repository": "tiangolo-fastapi",
+  "model": "text-embedding-3-small",
+  "dimensions": 1536,
+  "total_vectors": 1250,
+  "chunks": [
+    {
+      "chunk_id": "chunk-1001",
+      "fact_type": "CLASS",
+      "content": "class User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username",
+      "vector_preview": [0.0124, -0.0451, 0.0892, -0.1021, 0.0335, -0.0014, 0.0568, "... (1529 more)"],
+      "pca_2d": {"x": 12.5, "y": -4.2}
+    },
+    {
+      "chunk_id": "chunk-1002",
+      "fact_type": "FUNCTION",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"",
+      "vector_preview": [-0.0221, 0.0315, 0.0447, -0.0128, 0.0913, 0.0244, -0.0661, "... (1529 more)"],
+      "pca_2d": {"x": 18.1, "y": 2.4}
+    },
+    {
+      "chunk_id": "chunk-1003",
+      "fact_type": "MARKDOWN",
+      "content": "## Users API\nThe users API allows you to create and manage accounts.",
+      "vector_preview": [0.0521, -0.0115, 0.0247, 0.0128, 0.0113, -0.0844, -0.0161, "... (1529 more)"],
+      "pca_2d": {"x": 14.2, "y": 3.1}
+    },
+    {
+      "chunk_id": "chunk-1004",
+      "fact_type": "TEST",
+      "content": "def test_create_user():\n    response = client.post('/users', json={'username': 'test'})",
+      "vector_preview": [-0.0621, 0.0815, -0.0147, -0.0328, 0.0513, 0.0144, 0.0761, "... (1529 more)"],
+      "pca_2d": {"x": 17.5, "y": 8.4}
+    }
+  ]
+}

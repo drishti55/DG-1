@@ -1,0 +1,24 @@
+{
+  "issue_id": "DRIFT-104",
+  "title": "Update Pydantic dict() references to model_dump() in docs",
+  "drift_type": "CODE_DOCS_MISMATCH",
+  "severity": "HIGH",
+  "generated_artifacts": [
+    {
+      "id": "artifact-1",
+      "type": "PULL_REQUEST",
+      "target_file": "docs/users.md",
+      "title": "docs: update pydantic v2 methods",
+      "diff": "@@ -45,7 +45,7 @@\n To serialize the user object for JSON responses:\n \n ```python\n-user_data = user.dict()\n+user_data = user.model_dump()\n ```\n \n This will return a dictionary.",
+      "status": "READY_FOR_REVIEW"
+    },
+    {
+      "id": "artifact-2",
+      "type": "TICKET",
+      "platform": "Linear",
+      "title": "Audit all docs for Pydantic V2 deprecations",
+      "description": "The AI DriftGuard system detected drift in `docs/users.md` where `dict()` is used instead of `model_dump()`. We need to audit the rest of the documentation for similar V1 to V2 migration misses.",
+      "status": "DRAFT"
+    }
+  ]
+}

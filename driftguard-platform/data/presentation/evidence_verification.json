@@ -1,0 +1,22 @@
+{
+  "claim": "The api/users.py file implements a User class and a create_user function.",
+  "extracted_facts": [
+    {
+      "fact_id": "fact-1001",
+      "source_file": "api/users.py",
+      "fact_type": "CLASS",
+      "content": "class User:\n    \"\"\"User model representing an account.\"\"\"",
+      "lines": "L4-L10"
+    },
+    {
+      "fact_id": "fact-1002",
+      "source_file": "api/users.py",
+      "fact_type": "FUNCTION",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):",
+      "lines": "L12-L18"
+    }
+  ],
+  "verification_logic": "The LLM claim asserts the presence of a 'User' class and a 'create_user' function in 'api/users.py'. Fact-1001 extracted by the AST parser confirms the exact 'User' class definition. Fact-1002 confirms the 'create_user' function definition. The LLM claim is strictly supported by deterministic AST evidence.",
+  "verification_status": "VERIFIED",
+  "confidence_score": 0.99
+}

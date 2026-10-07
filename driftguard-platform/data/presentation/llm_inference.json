@@ -1,0 +1,38 @@
+{
+  "provider": "Ollama / Llama.cpp",
+  "endpoint": "http://localhost:11434",
+  "gpu_memory": {
+    "total": "16.0 GB",
+    "used": "6.2 GB",
+    "utilization": 38
+  },
+  "active_model": {
+    "name": "llama-3-8b-instruct-q4_K_M",
+    "parameters": "8.0B",
+    "quantization": "4-bit (GGUF)",
+    "context_window": 8192,
+    "temperature": 0.1
+  },
+  "available_models": [
+    {
+      "name": "llama-3-8b-instruct-q4_K_M",
+      "size": "4.7 GB",
+      "arch": "llama"
+    },
+    {
+      "name": "mistral-7b-instruct-v0.2-q4_0",
+      "size": "4.1 GB",
+      "arch": "mistral"
+    },
+    {
+      "name": "phi-3-mini-4k-instruct-q4",
+      "size": "2.3 GB",
+      "arch": "phi3"
+    },
+    {
+      "name": "gemma-2-9b-it-q5_K_M",
+      "size": "6.6 GB",
+      "arch": "gemma2"
+    }
+  ]
+}

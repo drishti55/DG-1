@@ -1,0 +1,50 @@
+{
+  "active_model": "llama-3-8b-instruct-q4_k_m",
+  "total_vram_allocated_gb": 6.2,
+  "models": [
+    {
+      "id": "llama-3-8b-instruct-q4_k_m",
+      "name": "Llama 3 (8B) Instruct",
+      "provider": "Local (Ollama / GGML)",
+      "quantization": "Q4_K_M",
+      "context_window": 8192,
+      "vram_required_gb": 6.2,
+      "status": "ACTIVE",
+      "avg_latency_ms": 124,
+      "tags": ["Primary", "Instruction Tuned"]
+    },
+    {
+      "id": "mistral-7b-v0.2-awq",
+      "name": "Mistral v0.2 (7B)",
+      "provider": "Local (vLLM Engine)",
+      "quantization": "AWQ 4-bit",
+      "context_window": 32768,
+      "vram_required_gb": 5.1,
+      "status": "STANDBY",
+      "avg_latency_ms": 95,
+      "tags": ["High Context", "Fast Inference"]
+    },
+    {
+      "id": "gpt-4o-2024-05-13",
+      "name": "GPT-4o",
+      "provider": "Cloud (OpenAI API)",
+      "quantization": "FP16 (Native)",
+      "context_window": 128000,
+      "vram_required_gb": 0.0,
+      "status": "API_READY",
+      "avg_latency_ms": 450,
+      "tags": ["Cloud", "Fallback", "State-of-the-Art"]
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Cloud (Anthropic)",
+      "quantization": "FP16 (Native)",
+      "context_window": 200000,
+      "vram_required_gb": 0.0,
+      "status": "API_READY",
+      "avg_latency_ms": 380,
+      "tags": ["Cloud", "Coding Expert"]
+    }
+  ]
+}

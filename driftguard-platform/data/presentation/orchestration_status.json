@@ -1,0 +1,17 @@
+{
+  "system_status": "ONLINE",
+  "active_dataset": "tiangolo-fastapi",
+  "pipeline_stages": [
+    { "id": 1, "name": "Source Ingestion", "status": "COMPLETED", "duration_ms": 1240, "icon": "Database" },
+    { "id": 2, "name": "AST Extraction", "status": "COMPLETED", "duration_ms": 4510, "icon": "Code2" },
+    { "id": 3, "name": "Semantic Chunking", "status": "COMPLETED", "duration_ms": 850, "icon": "SplitSquareHorizontal" },
+    { "id": 4, "name": "Vector Embeddings", "status": "COMPLETED", "duration_ms": 12400, "icon": "Activity" },
+    { "id": 5, "name": "Graph Construction", "status": "COMPLETED", "duration_ms": 3200, "icon": "Network" },
+    { "id": 6, "name": "Hybrid Retrieval", "status": "IDLE", "duration_ms": 0, "icon": "Search" },
+    { "id": 7, "name": "RAG Synthesis", "status": "IDLE", "duration_ms": 0, "icon": "Wand2" },
+    { "id": 8, "name": "Evidence Verification", "status": "IDLE", "duration_ms": 0, "icon": "ShieldCheck" },
+    { "id": 9, "name": "Structured Validation", "status": "IDLE", "duration_ms": 0, "icon": "FileJson2" }
+  ],
+  "last_run": "2026-10-07T06:15:00Z",
+  "memory_usage_gb": 4.2
+}

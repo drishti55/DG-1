@@ -1,0 +1,19 @@
+{
+  "provider": "GitHub App",
+  "app_status": "CONNECTED",
+  "app_name": "DriftGuard Enterprise",
+  "installation_id": "inst_8829102",
+  "webhook_url": "https://api.driftguard.dev/webhooks/github/receive",
+  "webhook_secret_set": true,
+  "triggers": {
+    "on_pull_request": true,
+    "on_push_to_main": false,
+    "on_release": true
+  },
+  "policies": {
+    "block_pr_on_severe_drift": true,
+    "auto_comment_on_pr": true,
+    "require_human_override": false
+  },
+  "last_sync": "2026-10-07T06:18:00Z"
+}

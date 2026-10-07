@@ -1,0 +1,35 @@
+{
+  "query": "How is a user account created and stored?",
+  "strategy": "Convex Combination",
+  "alpha_dense": 0.7,
+  "top_k": 3,
+  "results": [
+    {
+      "chunk_id": "chunk-1002",
+      "file": "api/users.py",
+      "fact_type": "FUNCTION",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"\n    # implementation\n    session.add(user)\n    session.commit()\n    return user",
+      "final_score": 0.8919,
+      "dense_score": 0.9245,
+      "bm25_normalized": 0.8170
+    },
+    {
+      "chunk_id": "chunk-1003",
+      "file": "docs/users.md",
+      "fact_type": "MARKDOWN",
+      "content": "## Users API\nThe users API allows you to create and manage accounts by making a POST request to /users. The database handles commit natively.",
+      "final_score": 0.8541,
+      "dense_score": 0.8812,
+      "bm25_normalized": 0.7910
+    },
+    {
+      "chunk_id": "chunk-1001",
+      "file": "api/users.py",
+      "fact_type": "CLASS",
+      "content": "class User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username",
+      "final_score": 0.6931,
+      "dense_score": 0.7451,
+      "bm25_normalized": 0.5720
+    }
+  ]
+}

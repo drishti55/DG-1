@@ -1,0 +1,35 @@
+{
+  "current_period": "Oct 1 - Oct 31, 2026",
+  "total_spend_usd": 412.50,
+  "budget_limit_usd": 1000.00,
+  "savings_from_local_compute_usd": 850.20,
+  "usage_by_provider": [
+    {
+      "provider": "OpenAI (GPT-4o)",
+      "input_tokens": 12500000,
+      "output_tokens": 2400000,
+      "cost_usd": 382.50
+    },
+    {
+      "provider": "Anthropic (Claude 3.5)",
+      "input_tokens": 800000,
+      "output_tokens": 150000,
+      "cost_usd": 30.00
+    },
+    {
+      "provider": "Local (Llama 3 / Mistral)",
+      "input_tokens": 45000000,
+      "output_tokens": 12000000,
+      "cost_usd": 0.00
+    }
+  ],
+  "daily_spend": [
+    {"date": "Oct 01", "cost": 12.50},
+    {"date": "Oct 02", "cost": 15.20},
+    {"date": "Oct 03", "cost": 14.80},
+    {"date": "Oct 04", "cost": 45.00},
+    {"date": "Oct 05", "cost": 82.50},
+    {"date": "Oct 06", "cost": 105.20},
+    {"date": "Oct 07", "cost": 137.30}
+  ]
+}

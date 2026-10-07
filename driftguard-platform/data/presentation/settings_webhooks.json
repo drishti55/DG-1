@@ -1,0 +1,33 @@
+{
+  "active_webhooks": 3,
+  "events_delivered_24h": 142,
+  "webhooks": [
+    {
+      "id": "wh_001",
+      "name": "Slack Alerting (#sec-eng)",
+      "url": "https://api.example.com/slack-webhook-mock",
+      "status": "HEALTHY",
+      "subscribed_events": ["drift.detected.severe", "pipeline.failed"],
+      "last_delivery": "2026-10-07T06:12:00Z",
+      "created_at": "2026-01-15T09:00:00Z"
+    },
+    {
+      "id": "wh_002",
+      "name": "Jira Issue Sync",
+      "url": "https://jira.enterprise.local/rest/webhooks/1.0",
+      "status": "HEALTHY",
+      "subscribed_events": ["pr.generated", "drift.detected.moderate"],
+      "last_delivery": "2026-10-07T05:45:00Z",
+      "created_at": "2026-03-22T11:30:00Z"
+    },
+    {
+      "id": "wh_003",
+      "name": "PagerDuty Escalation",
+      "url": "https://events.pagerduty.com/v2/enqueue",
+      "status": "FAILING",
+      "subscribed_events": ["system.offline", "model.finetune.failed"],
+      "last_delivery": "2026-10-06T14:22:10Z",
+      "created_at": "2026-08-01T14:00:00Z"
+    }
+  ]
+}

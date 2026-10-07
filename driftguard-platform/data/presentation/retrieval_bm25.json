@@ -1,0 +1,35 @@
+{
+  "query": "How is a user account created and stored?",
+  "tokenizer": "whitespace+lowercase+stemming",
+  "query_tokens": ["how", "user", "account", "creat", "stor"],
+  "top_k": 3,
+  "results": [
+    {
+      "chunk_id": "chunk-1002",
+      "file": "api/users.py",
+      "fact_type": "FUNCTION",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):\n    \"\"\"Create a new user.\"\"\"\n    # implementation\n    session.add(user)\n    session.commit()\n    return user",
+      "score": 14.251,
+      "distance_metric": "BM25",
+      "term_frequencies": {"user": 4, "creat": 2}
+    },
+    {
+      "chunk_id": "chunk-1003",
+      "file": "docs/users.md",
+      "fact_type": "MARKDOWN",
+      "content": "## Users API\nThe users API allows you to create and manage accounts by making a POST request to /users. The database handles commit natively.",
+      "score": 11.824,
+      "distance_metric": "BM25",
+      "term_frequencies": {"user": 3, "account": 1, "creat": 1}
+    },
+    {
+      "chunk_id": "chunk-1001",
+      "file": "api/users.py",
+      "fact_type": "CLASS",
+      "content": "class User:\n    \"\"\"User model representing an account.\"\"\"\n    def __init__(self, username: str):\n        self.username = username",
+      "score": 8.459,
+      "distance_metric": "BM25",
+      "term_frequencies": {"user": 3, "account": 1}
+    }
+  ]
+}

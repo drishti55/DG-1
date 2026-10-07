@@ -1,0 +1,29 @@
+{
+  "repository": "tiangolo-fastapi",
+  "nodes": [
+    { "id": "n1", "label": "api/users.py", "type": "Code", "x": 400, "y": 100 },
+    { "id": "n2", "label": "create_user()", "type": "Code", "x": 400, "y": 300 },
+    { "id": "n3", "label": "docs/users.md", "type": "Documentation", "x": 100, "y": 300 },
+    { "id": "n4", "label": "tests/test_users.py", "type": "Tests", "x": 700, "y": 300 },
+    { "id": "n5", "label": "requirements.txt", "type": "Dependencies", "x": 100, "y": 500 },
+    { "id": "n6", "label": "core/config.py", "type": "Configuration", "x": 400, "y": 500 }
+  ],
+  "edges": [
+    { 
+      "id": "e1", "source": "n1", "target": "n2", "label": "CONTAINS",
+      "evidence": "api/users.py:L25", "verification": "VERIFIED"
+    },
+    { 
+      "id": "e2", "source": "n3", "target": "n2", "label": "DOCUMENTS_API",
+      "evidence": "docs/users.md states GET /users", "verification": "DRIFT FOUND"
+    },
+    { 
+      "id": "e3", "source": "n4", "target": "n2", "label": "TESTS",
+      "evidence": "test_create_user() invokes API", "verification": "VERIFIED"
+    },
+    { 
+      "id": "e4", "source": "n5", "target": "n6", "label": "CONFIGURES",
+      "evidence": "requirements.txt specifies pydantic==1.10.8 vs Pydantic V2", "verification": "DRIFT FOUND"
+    }
+  ]
+}

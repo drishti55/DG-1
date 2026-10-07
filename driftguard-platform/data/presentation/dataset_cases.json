@@ -1,0 +1,51 @@
+{
+  "total": 154241,
+  "train": 100825,
+  "validation": 29267,
+  "test": 24149,
+  "repositories": 488,
+  "items": [
+    {
+      "case_id": "case-1092",
+      "repository": "tiangolo/fastapi",
+      "language": "python",
+      "artifact_1": "api/users.py:L14-20",
+      "artifact_2": "docs/users.md:L5-8",
+      "drift_present": true,
+      "drift_type": "API_MISMATCH",
+      "severity": "HIGH",
+      "evidence": "Code implements POST /users with parameter 'user_id', but documentation states GET /users with 'id'.",
+      "expected_fix": "Update documentation to reflect the POST method and 'user_id' parameter.",
+      "validation_result": "DRIFT FOUND",
+      "dataset_split": "test"
+    },
+    {
+      "case_id": "case-4431",
+      "repository": "tiangolo/fastapi",
+      "language": "python",
+      "artifact_1": "requirements.txt",
+      "artifact_2": "core/config.py:L45-50",
+      "drift_present": true,
+      "drift_type": "DEPENDENCY_MISMATCH",
+      "severity": "CRITICAL",
+      "evidence": "requirements.txt specifies pydantic==1.10.8, but core/config.py uses Pydantic V2 API.",
+      "expected_fix": "Upgrade pydantic to ^2.0.0 in requirements.txt.",
+      "validation_result": "DRIFT FOUND",
+      "dataset_split": "validation"
+    },
+    {
+      "case_id": "case-9912",
+      "repository": "tiangolo/fastapi",
+      "language": "python",
+      "artifact_1": "core/security.py:L20-30",
+      "artifact_2": "tests/test_security.py:L10-15",
+      "drift_present": false,
+      "drift_type": "NONE",
+      "severity": "NONE",
+      "evidence": "Test correctly invokes 'verify_password' with the required arguments.",
+      "expected_fix": "None",
+      "validation_result": "NO DRIFT FOUND",
+      "dataset_split": "train"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "query": "How is a user account created and stored?",
+  "llm_model": "Llama-3-8B-Instruct",
+  "system_prompt": "You are an expert developer. Answer the user's question based ONLY on the provided context. Cite your sources.",
+  "retrieved_context": [
+    {
+      "chunk_id": "chunk-1002",
+      "content": "@router.post('/users')\ndef create_user(user_id: str):\n    # implementation\n    session.add(user)\n    session.commit()\n    return user"
+    },
+    {
+      "chunk_id": "chunk-1003",
+      "content": "## Users API\nThe users API allows you to create and manage accounts by making a POST request to /users. The database handles commit natively."
+    }
+  ],
+  "generation": "To create and store a user account, you must make a `POST` request to the `/users` API endpoint (chunk-1003). \n\nUnder the hood, this triggers the `create_user()` function which handles the storage. The user object is added to the database session using `session.add(user)` and stored permanently when `session.commit()` is called (chunk-1002).",
+  "citations": ["chunk-1002", "chunk-1003"],
+  "generation_time_ms": 1245,
+  "tokens_used": {
+    "prompt": 412,
+    "completion": 84,
+    "total": 496
+  }
+}

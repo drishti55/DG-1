@@ -1,0 +1,19 @@
+{
+  "overall_status": "HEALTHY",
+  "uptime": "99.99%",
+  "active_incidents": 0,
+  "metrics": {
+    "cpu_usage_percent": 34,
+    "ram_usage_gb": 12.4,
+    "ram_total_gb": 32.0,
+    "db_connections": 142,
+    "db_max_connections": 500
+  },
+  "services": [
+    {"id": "svc_web", "name": "Frontend Application", "status": "UP", "latency_ms": 45, "uptime": "30d 14h", "type": "Node.js"},
+    {"id": "svc_api", "name": "FastAPI Orchestrator", "status": "UP", "latency_ms": 112, "uptime": "30d 14h", "type": "Python"},
+    {"id": "svc_db", "name": "PostgreSQL Primary DB", "status": "UP", "latency_ms": 12, "uptime": "142d 9h", "type": "Database"},
+    {"id": "svc_vec", "name": "FAISS Vector Cluster", "status": "UP", "latency_ms": 85, "uptime": "30d 14h", "type": "MemoryDB"},
+    {"id": "svc_llm", "name": "Local LLM GPU Node", "status": "DEGRADED", "latency_ms": 1450, "uptime": "2d 4h", "type": "Compute"}
+  ]
+}
